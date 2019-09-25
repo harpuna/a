@@ -1,0 +1,24 @@
+jg () {
+    grep --color=always -R -r -I -i -n --exclude=*.log --exclude-dir=target --exclude-dir=log --exclude-dir=logs --exclude-dir=.idea --exclude-dir=.git --exclude-dir=exclude --exclude-dir=node_modules "$@" . | more -s
+}
+jf () {
+    find . -iname "*$1*" 2>/dev/null
+}
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+#alias l='ls -CF'
+alias l='ls -latrG'
+alias p="pwd"
+alias lll='ls -ld $(find .)'
+alias jgrep='grep --color=always -r -I -i -n'
+alias jjgrep='grep --color=always -r -i -n'
+alias h='history 100'
+alias hg='history | grep'
+alias pss='ps -ef | grep'
+alias g='git'
+alias gs='git status'
+alias gd='git diff'
+alias gco='git checkout'
+
